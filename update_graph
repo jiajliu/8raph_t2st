@@ -6,13 +6,16 @@
   {"version": "4.0.0-0.nightly-2019-03-21-164511","payload": "registry.svc.ci.openshift.org/ocp/release:4.0.0-0.nightly-2019-03-21-164511","metadata": {}},
   {"version": "4.0.0-0.nightly-2019-03-23-222829","payload": "registry.svc.ci.openshift.org/ocp/release:4.0.0-0.nightly-2019-03-23-222829","metadata": {}},
   {"version": "4.0.0-0.nightly-2019-04-02-081046","payload": "registry.svc.ci.openshift.org/ocp/release:4.0.0-0.nightly-2019-04-02-081046","metadata": {}},
-  {"version": "4.0.0-0.nightly-2019-04-02-133735","payload": "registry.svc.ci.openshift.org/ocp/release:4.0.0-0.nightly-2019-04-02-133735","metadata": {}}
+  {"version": "4.0.0-0.nightly-2019-04-02-133735","payload": "registry.svc.ci.openshift.org/ocp/release:4.0.0-0.nightly-2019-04-02-133735","metadata": {}},
+  {"version": "4.0.0-0.9","payload": "quay.io/openshift-release-dev/ocp-release:4.0.0-0.9","metadata": {"com.openshift.upgrades.graph.release.manifestref": "sha256:29a057c89cc5cf9c7853c52b815ba95bd66d1a66cb274d1991ca4951f5920cb2"}},
+  {"version": "4.0.0-0.10","payload": "quay.io/openshift-release-dev/ocp-release:4.0.0-0.10","metadata": {"com.openshift.upgrades.graph.release.manifestref": "sha256:df05555541a7c40cae2f0603c33329e897ed4b71a07cba947f7dcea1a2291fbc"}}
  ],
  "edges": [
   [0,1],
   [0,2],
   [2,3],
   [4,6],
-  [5,6]
+  [5,6],
+  [7,8]
  ]
 }
