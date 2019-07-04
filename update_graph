@@ -4,6 +4,6 @@
   {"version": "4.1.0-0.nightly-2019-07-03-215619","payload": "registry.svc.ci.openshift.org/ocp/release:4.1.0-0.nightly-2019-07-03-215619","metadata": {}}
  ],
  "edges": [
-  [0,1],
+  [0,1]
  ]
 }
