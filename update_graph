@@ -1,7 +1,7 @@
 {
  "nodes": [
   {"version": "4.5.5","payload": "quay.io/openshift-release-dev/ocp-release@sha256:a58573e1c92f5258219022ec104ec254ded0a70370ee8ed2aceea52525639bd4","metadata": {}},
-  {"version": "4.6.0-0.nightly-2020-08-07-034746","payload": "quay.io/openshift-release-dev/ocp-release@sha256:53fa74a6d426822340be6bf86a659cbae92de021ade6d2048fa117713e3ec379","metadata": {}}
+  {"version": "4.6.0-0.nightly-2020-08-07-034746","payload": "registry.svc.ci.openshift.org/ocp/release@sha256::53fa74a6d426822340be6bf86a659cbae92de021ade6d2048fa117713e3ec379","metadata": {}}
  ],
  "edges": [
   [0,1]
