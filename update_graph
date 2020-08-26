@@ -1,6 +1,6 @@
 {
  "nodes": [
-  {"version": "4.6.0-0.nightly-2020-08-16-072105","payload": "registry.svc.ci.openshift.org/ocp/release@sha256:4cb280f7473d303ce9ec7ab9b4daa54f00147ea637bbc848c9d1f7a72af5660a","metadata": {}},
+  {"version": "4.6.0-0.nightly-2020-08-25-222652","payload": "registry.svc.ci.openshift.org/ocp/release@sha256:883335ac779596a282ca9f62e74ed85d416cb3050316722ba5947481159943e7","metadata": {}},
   {"version": "4.6.0-0.nightly-2020-08-07-034746","payload": "registry.svc.ci.openshift.org/ocp/release@sha256:53fa74a6d426822340be6bf86a659cbae92de021ade6d2048fa117713e3ec379","metadata": {}}
  ],
  "edges": [
