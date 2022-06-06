@@ -1,9 +1,21 @@
 {
- "nodes": [
-  {"version": "4.6.0-0.nightly-2020-08-25-222652","payload": "registry.svc.ci.openshift.org/ocp/release@sha256:883335ac779596a282ca9f62e74ed85d416cb3050316722ba5947481159943e7","metadata": {}},
-  {"version": "4.6.0-0.nightly-2020-08-07-034746","payload": "registry.svc.ci.openshift.org/ocp/release@sha256:53fa74a6d426822340be6bf86a659cbae92de021ade6d2048fa117713e3ec379","metadata": {}}
- ],
- "edges": [
-  [0,1]
- ]
+  "nodes": [
+    {
+      "version": "4.11.0-0.nightly-2022-06-04-014713",
+      "payload": "example.com@sha256:4827e2254a5aae1b5a9d14658169833cf46fd6d8fc0e24f7552d200def19579b",
+      "metadata": {
+	       "io.openshift.upgrades.graph.release.channels": "channel-a,channel-b"
+      }
+    },
+    {
+      "version": "4.11.0-0.nightly-2022-06-01-200905",
+      "payload": "registry.ci.openshift.org/ocp/release@sha256:04c00cf5455231e259a28dd4629fd9e9c8f2c50e1397b0f8d303e7b50f6664bd",
+      "metadata": {
+	       "io.openshift.upgrades.graph.release.channels": "channel-a,channel-b"
+      }
+    }
+  ],
+  "edges": [
+    [0,1]
+  ]
 }
