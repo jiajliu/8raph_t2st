@@ -1,35 +1,27 @@
 {
-	"nodes": [{
-			"version": "4.12.0-0.nightly-2022-08-24-053339",
-			"payload": "registry.ci.openshift.org/ocp/release@sha256:ff35169d4e73d1dad7dbb722c0e2424ad963257d75b8f83f4d1b776703fd9d18",
-			"metadata": {
-				"io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
-				"io.openshift.upgrades.graph.release.channels": "stable-4.12",
-				"io.openshift.upgrades.graph.release.manifestref": "sha256:ff35169d4e73d1dad7dbb722c0e2424ad963257d75b8f83f4d1b776703fd9d18"
-			}
-		},
-		{
-			"version": "4.12.0-0.nightly-2022-08-23-223922",
-			"payload": "registry.ci.openshift.org/ocp/release@sha256:e1dc2ab7a69de1d3f5ed6801cadc72dde7081c6c83ad4e6327678498cf1c5e52",
-			"metadata": {
-				"io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
-				"io.openshift.upgrades.graph.release.channels": "stable-4.12",
-				"io.openshift.upgrades.graph.release.manifestref": "sha256:e1dc2ab7a69de1d3f5ed6801cadc72dde7081c6c83ad4e6327678498cf1c5e52"
-			}
-		},
-		{
-			"version": "4.12.0-0.nightly-multi-2022-08-23-083717",
-			"payload": "quay.io/openshift-release-dev/ocp-release@sha256:a881d76e2e222f7aec5af347e44a71262e32c1d4a771addd405a031e2057f1f1",
-			"metadata": {
-				"io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
-				"io.openshift.upgrades.graph.release.channels": "stable-4.12",
-				"io.openshift.upgrades.graph.release.manifestref": "sha256:a881d76e2e222f7aec5af347e44a71262e32c1d4a771addd405a031e2057f1f1",
-				"release.openshift.io/architecture": "multi"
-			}
-		}
-	],
-	"edges": [
-		[0, 1],
-		[0, 2]
-	]
+    "nodes": [{
+            "version": "4.12.0-0.nightly-multi-2022-08-30-124821",
+            "payload": "quay.io/openshift-release-dev/ocp-release-nightly@sha256:4bac6bf4df4100dc2764848056b3a18db1715aad4c84917c576d0b7903a263d3",
+            "metadata": {
+                "io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
+                "io.openshift.upgrades.graph.release.channels": "stable-4.12",
+                "io.openshift.upgrades.graph.release.manifestref": "sha256:4bac6bf4df4100dc2764848056b3a18db1715aad4c84917c576d0b7903a263d3",
+                "release.openshift.io/architecture": "multi"
+            }
+        },
+        {
+            "version": "4.12.0-0.nightly-multi-2022-08-31-025536",
+            "payload": "quay.io/openshift-release-dev/ocp-release-nightly@sha256:32b20c480e48f45637a94557bc0b48118612e69b4c34039d02ab1f8228665602",
+            "metadata": {
+                "io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
+                "io.openshift.upgrades.graph.release.channels": "stable-4.12",
+                "io.openshift.upgrades.graph.release.manifestref": "sha256:32b20c480e48f45637a94557bc0b48118612e69b4c34039d02ab1f8228665602",
+                "release.openshift.io/architecture": "multi"
+            }
+        }
+    ],
+    "edges": [
+        [0, 1]
+    ]
 }
+
