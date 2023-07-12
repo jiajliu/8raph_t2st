@@ -1,27 +1,97 @@
 {
-    "nodes": [{
-            "version": "4.12.0-0.nightly-multi-2022-08-30-124821",
-            "payload": "quay.io/openshift-release-dev/ocp-release-nightly@sha256:4bac6bf4df4100dc2764848056b3a18db1715aad4c84917c576d0b7903a263d3",
-            "metadata": {
-                "io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
-                "io.openshift.upgrades.graph.release.channels": "stable-4.12",
-                "io.openshift.upgrades.graph.release.manifestref": "sha256:4bac6bf4df4100dc2764848056b3a18db1715aad4c84917c576d0b7903a263d3",
-                "release.openshift.io/architecture": "multi"
+  "nodes": [
+    {
+      "version": "4.12.23",
+      "payload": "quay.io/openshift-release-dev/ocp-release@sha256:2309578b68c5666dad62aed696f1f9d778ae1a089ee461060ba7b9514b7ca417"
+    },
+    {
+      "version": "4.11.0-0.nightly-2022-04-19-111252",
+      "payload": "registry.ci.openshift.org/ocp/release@sha256:66c753e8b75d172f2a3f7ba13363383a76ecbc7ecdc00f3a423bef4ea8560405"
+    },
+    {
+      "version": "4.11.0-0.nightly-2022-04-19-195955",
+      "payload": "registry.ci.openshift.org/ocp/release@sha256:a5cd1b44e5b25b8a617d92a1f947297f56fc9bad104c117a8e452f932e1e2fd0"
+    },
+    {
+      "version": "4.11.0-0.nightly-2022-04-20-045714",
+      "payload": "registry.ci.openshift.org/ocp/release@sha256:e385a786f122c6c0e8848ecb9901f510676438f17af8a5c4c206807a9bc0bf28"
+    }
+  ],
+  "edges": [
+    [0,1],
+    [0,2],
+    [0,3]
+  ],
+  "conditionalEdges":[
+    {
+      "edges": [
+        {"from": "4.11.0-0.nightly-2022-04-16-163450", "to": "4.11.0-0.nightly-2022-04-19-111252"}
+      ],
+      "risks": [
+        {
+          "url": "https://bug.example.com/a",
+          "name": "SomeInvokerThing",
+          "message": "On clusters on default invoker user, this imaginary bug can happen.",
+          "matchingRules": [
+            {
+              "type": "PromQL",
+              "promql": {
+                "promql": "cluster_installer"
+              }
             }
+          ]
         },
         {
-            "version": "4.12.0-0.nightly-multi-2022-08-31-025536",
-            "payload": "quay.io/openshift-release-dev/ocp-release-nightly@sha256:32b20c480e48f45637a94557bc0b48118612e69b4c34039d02ab1f8228665602",
-            "metadata": {
-                "io.openshift.upgrades.graph.previous.remove_regex": "4\\.11\\..*",
-                "io.openshift.upgrades.graph.release.channels": "stable-4.12",
-                "io.openshift.upgrades.graph.release.manifestref": "sha256:32b20c480e48f45637a94557bc0b48118612e69b4c34039d02ab1f8228665602",
-                "release.openshift.io/architecture": "multi"
+          "url": "https://bug.example.com/b",
+          "name": "SomeChannelThing",
+          "message": "On clusters with the channel set to 'buggy', this imaginary bug can happen.",
+          "matchingRules": [
+            {
+              "type": "PromQL",
+              "promql": {
+                "promql": "group(cluster_version_available_updates{channel=\"buggy\"})\nor\n0 * group(cluster_version_available_updates{channel!=\"buggy\"})"
+              }
             }
+          ]
         }
-    ],
-    "edges": [
-        [0, 1]
-    ]
+      ]
+    },
+    {
+      "edges": [
+        {"from": "4.11.0-0.nightly-2022-04-16-163450", "to": "4.11.0-0.nightly-2022-04-20-045714"}
+      ],
+      "risks": [
+        {
+          "url": "https://openshift-release.apps.ci.l2s4.p1.openshiftapps.com/releasestream/4.10.0-0.nightly/release/4.10.0-0.nightly-2021-11-24-075634",
+          "name": "ReleaseIsRejected",
+          "message": "Too many CI failures on this release, so do not update to it",
+          "matchingRules": [
+            {
+              "type": "Always"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "edges": [
+        {"from": "4.11.0-0.nightly-2022-04-16-163450", "to": "4.11.0-0.nightly-2022-04-19-195955"}
+      ],
+      "risks": [
+        {
+          "url": "https://bug.example.com/c",
+          "name": "SomeInfrastructureThing",
+          "message": "Clusters on nonexist provider, this imaginary bug can happen.",
+          "matchingRules": [
+            {
+              "type": "PromQL",
+              "promql": {
+                "promql": "cluster_infrastructure_provider{type=~\"nonexist\"}\nor\n0 * cluster_infrastructure_provider"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
-
